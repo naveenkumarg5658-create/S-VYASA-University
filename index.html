@@ -446,7 +446,7 @@
 
   <div class="class-label-bar" id="classLabelBar">
     <span class="class-label-badge" id="classLabelBadge">II BCA</span>
-    <span class="class-label-name" id="classLabelName">BCA II (2023 – 2026)</span>
+    <span class="class-label-name" id="classLabelName">Bachelor of Computer Applications II (2024 – 2026)</span>
     <span class="class-label-sub" id="classLabelSub"></span>
   </div>
 
@@ -834,7 +834,7 @@ function downloadPDF(){
     const pct=maxTotal>0?(s.total/maxTotal)*100:0,isTop=s.rank<=3&&s.total>0;
     return `<tr class="${s.total===0?'no-attempt':''}"><td class="td-sno">${i+1}</td><td class="td-name">${s.name}${isTop?`<span class="topper-tag">#${s.rank}</span>`:''}</td><td><span class="badge ${s.easy>0?'badge-easy':'badge-zero'}">${s.easy}</span></td><td><span class="badge ${s.medium>0?'badge-medium':'badge-zero'}">${s.medium}</span></td><td><span class="badge ${s.hard>0?'badge-hard':'badge-zero'}">${s.hard}</span></td><td><strong>${s.total}</strong></td><td><div class="total-bar-wrap"><div class="total-bar-fill" style="width:${pct}%"></div></div></td></tr>`;
   }).join('');
-  window.print();setTimeout(()=>{tbody.innerHTML=savedHTML;},600);
+  window.print();setTimeout(()=>{tbody.innerHTML=savedHTML;},400);
 }
 
 loadClassData();renderMetrics();renderCharts();renderTable();
